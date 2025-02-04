@@ -10,5 +10,5 @@ for i in range(1 , 5+1):
             maior = peso
         if peso < menor:
             menor  = peso
-print(f"O maior peso foi: {maior}")
-print(f"O menor peso foi {menor}")
+print(f"O maior peso foi: {maior}Kg")
+print(f"O menor peso foi {menor}Kg")
