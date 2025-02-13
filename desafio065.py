@@ -1,25 +1,19 @@
-soma = 0
 continuar = True
-cont = 0
-num = int(input("Informe um número: "))
-menor = num
-maior = num
+soma = cont = 0 #Iguala tudo a zero
 while continuar != False:
-    num = int(input("Informe outro número: "))
-    soma += num
+    num = int(input("Digite um número: "))
     cont += 1
-    if num >= maior:
-        maior = num
-    if num <= menor:
-        menor = num
-    escolha = str(input("Deseja continuar? [S/N]")).upper().strip()
-    if escolha == "S":
-        print("Ok")
-    elif escolha == "N":
-        media = soma / cont
-        print(f"A média dos números informados é: {media}")
-        print(f"Foram informados {cont} números.")
-        print(f"O maior número informado foi {maior} e o menor foi {menor}")
-        continuar = False
+    soma += num
+    if cont == 1:
+        maior = menor = num
     else:
-        print("Opção inválida.")
+        if num > maior:
+            maior = num
+        if num < menor:
+            menor = num
+    continuar = input("Deseja continuar? [S/N]").upper().strip()[0]
+    if continuar == "N":
+        continuar = False
+print(f"A média dos números informados foi {soma / cont}")
+print(f"O maior número informado foi {maior} e o menor foi {menor}")
+print("Fim")

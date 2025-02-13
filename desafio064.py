@@ -1,12 +1,9 @@
-num = 0
-soma = 0
-cont = 0
+num = soma = cont = 0
+num999 = False
+num = int(input("Informe um numero [999 para parar]: "))
 while num != 999:
-    if num != 999:
-        num = int(input("Informe um numero: "))
-        soma += num
-        cont += 1
-    else:
-        print("Numero 999 digitado.")
-soma -= 999
+    soma += num
+    cont += 1
+    num = int(input("Informe um numero: "))
+print("Numero 999 digitado.")
 print(f"Foram digitados {cont} numeros. A soma dos números informados é {soma}")

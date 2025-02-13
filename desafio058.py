@@ -3,9 +3,12 @@ num = random.randint(0, 10)
 tries = 0
 chute = 999
 while chute != num:
-    chute = int(input("Escolha um número de 0 a 10: "))
+    tries += 1
+    chute = int(input("Adivinhe um número de 0 a 10: "))
     if chute != num:
-        print("Você errou. Tente de novo!")
-        tries += 1
+        if chute < num:
+            print(f"Mais. Tente novamente")
+        else:
+            print(f"Menos. Tente novamente")
     else:
-        print(f"Você Acertou! Mas foram precisas {tries} tentativas!")
+        print(f"Você Acertou! Foram precisas {tries} tentativas!")
