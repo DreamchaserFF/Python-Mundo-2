@@ -18,10 +18,13 @@ while True:
     if sexo == "F" and idade <= 20:
         mocas += 1
     escolha = str(input("Deseja continuar? [S/N] ")).strip().upper()[0]
+    while escolha != "N" and escolha != "S":
+        print("Escolha inválida.")
+        escolha = str(input("Deseja continuar? [S/N] ")).strip().upper()[0]
+        if escolha == "N":
+            break
     if escolha == "N":
         break
-    if escolha != "N" and escolha != "S":
-        print("Escolha inválida.")
 print(f"Foram informadas {maior18} pessoas com maiores de 18 anos.")
 print(f"Foram cadastrados {homens} homens.")
 print(f"Foram cadastradas {mocas} mulheres com menos de 20 anos.")
