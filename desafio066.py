@@ -1,6 +1,5 @@
-num = int(input("Informe um número: [999 para sair] "))
-soma = num
-cont = 1
+soma = 0
+cont = 0
 while True:
     num = int(input("informe um outro número: [999 para sair] "))
     if num == 999:
